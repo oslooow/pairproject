@@ -13,12 +13,14 @@
         <li class="nav-item">
           <a class="nav-link" href="/products">Products</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/products/<%= toSend.id %>">Cart</a>
+        </li>
         <li>
           <a class="nav-link text-warning">Hello <%= toSend.name %> (<%= toSend.role %>)</a>
         </li>
       </ul>
       <div class="nav-item">
-
         <form action="/logout" method="post"><a class="nav-link" href="">
             <button class="btn btn-dark">Logout</button>
           </a></form>

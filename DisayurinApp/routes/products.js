@@ -8,6 +8,8 @@ router.get('/products/addProducts',Controller.addProduct)
 
 router.post('/products/addProducts',Controller.saveAddProduct)
 
+router.get('/products/:productId/buy',Controller.buy)
+
 router.get('/products/:productId/detail',Controller.showProductsDetail)
 
 module.exports = router

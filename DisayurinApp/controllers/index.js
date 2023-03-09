@@ -24,8 +24,8 @@ class Controller {
     }
 
     static showAllProducts(req, res) { // menampilkan semua products
-        let {name, role} = req.session.user
-        let toSend = {name, role}
+        let {id, name, role} = req.session.user
+        let toSend = {id, name, role}
         const { search } = req.query
         const options = {
             where: {
@@ -43,7 +43,7 @@ class Controller {
         Product.findAll(options)
             .then(data => {
                 // res.send(data)
-                res.render("products", { data,toSend })
+                res.render("products", { data , toSend })
             })
             .catch(err => res.send(err))
     }
@@ -100,6 +100,9 @@ class Controller {
         Customer.create({ name, username, password, email })
             .then(data => res.redirect('/login'))
             .catch(err => res.send(err))
+    }
+    static buy(req,res){
+        
     }
 }
 
