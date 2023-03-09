@@ -1,4 +1,6 @@
 'use strict';
+const bcrypt = require('bcryptjs');
+
 const {
   Model
 } = require('sequelize');
@@ -12,11 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Customer.hasOne(models.Address),
-      // Customer.hasMany(models.Product)
-      Customer.belongsToMany(models.Product,{
-        through: "Transactions",
-        foreignKey: "CustomerId"
-      })
+        // Customer.hasMany(models.Product)
+        Customer.belongsToMany(models.Product, {
+          through: "Transactions",
+          foreignKey: "CustomerId"
+        })
     }
   }
   Customer.init({
@@ -29,16 +31,25 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Customer',
     hooks: {
-      beforeCreate: (applicant, options) => {
-
-        applicant.status = 'Pending'
-
-        applicant.dateApplied = Sequelize.fn('NOW')
-
-        let name = applicant.fullName.replace(/\s+/g, '_')
-        let lastPhone = applicant.phone.slice(-4) 
-        applicant.applicantCode = `${name}_${lastPhone}_${applicant.JobId}`
-        return applicant
+      beforeCreate: (customer) => {
+        return bcrypt.genSalt(10)
+          .then((salt) => {
+            return bcrypt.hash(customer.password, salt)
+              .then((hashedPassword) => {
+                customer.password = hashedPassword;
+              });
+          });
+      },
+      beforeUpdate: (customer) => {
+        if (customer.changed('password')) {
+          return bcrypt.genSalt(10)
+            .then((salt) => {
+              return bcrypt.hash(customer.password, salt)
+                .then((hashedPassword) => {
+                  customer.password = hashedPassword;
+                });
+            }); 
+        }
       }
     }
   });

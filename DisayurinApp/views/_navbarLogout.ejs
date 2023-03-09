@@ -1,8 +1,8 @@
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="/home">Disayurin</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
@@ -14,11 +14,14 @@
           <a class="nav-link" href="/products">Products</a>
         </li>
         <li>
-          
+          <a class="nav-link text-warning">Hello <%= toSend.name %> (<%= toSend.role %>)</a>
         </li>
       </ul>
       <div class="nav-item">
-        <form action="/logout" method="post"><a href=""><button class="btn btn-dark">Logout</button></a></form>
+
+        <form action="/logout" method="post"><a class="nav-link" href="">
+            <button class="btn btn-dark">Logout</button>
+          </a></form>
       </div>
     </div>
   </div>
