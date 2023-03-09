@@ -46,7 +46,7 @@ class Controller {
         Product.findAll(options)
             .then(data => {
                 // res.send(data)
-                res.render("products", { data })
+                res.render("products", { data , toSend})
             })
             .catch(err => res.send(err))
     }
@@ -136,15 +136,26 @@ class Controller {
         })
         .catch(err => res.send(err))
     }
-    static register(req, res) {
-        res.render('register')
-    }
-    static saveRegister(req, res) {
-        console.log(req.body);
+
+    static register(req, res) { // show form regis
+        const errors = req.query.errors
+
+        res.render('register' , {errors})
+    }   
+
+    static saveRegister(req, res) { //save register
+        
         let { name, username, password, email } = req.body
         Customer.create({ name, username, password, email })
             .then(data => res.redirect('/login'))
-            .catch(err => res.send(err))
+            .catch(err => {
+                // res.send(err)
+                if(err.name === "SequelizeValidationError"){
+                    const errors = err.errors.map(e => e.message)
+                    
+                    res.redirect(`/register?errors=${errors}`)
+                } else res.send(err)
+            })
     }
 }
 

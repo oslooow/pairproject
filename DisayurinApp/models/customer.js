@@ -22,11 +22,70 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Customer.init({
-    name: DataTypes.STRING,
-    username: DataTypes.STRING,
-    password: DataTypes.STRING,
-    email: DataTypes.STRING,
-    role: DataTypes.STRING,
+    name: {
+      type:DataTypes.STRING,
+      allowNull:false,
+      validate:{
+        notNull:{
+          msg : "Name must be filled"
+        },
+        notEmpty:{
+          msg : "Name must be filled"
+        },
+        isAlpha: {
+          isAlpha:true,
+          msg:"Name can only use alphabet"
+        },        
+      }
+    },
+    username: {
+      type:DataTypes.STRING,
+      allowNull:false,
+      validate:{
+        notNull:{
+          msg : "Username must be filled"
+        },
+        notEmpty:{
+          msg : "Username must be filled"
+        },
+        isAlpha: {
+          isAlpha:true,
+          msg:"Username can only use alphabet"
+        },    
+      }
+    },
+    password: {
+      type:DataTypes.STRING,
+      allowNull:false,
+      validate:{
+        notNull:{
+          msg : "Password must be filled"
+        },
+        notEmpty:{
+          msg : "Password must be filled"
+        },
+        isAlphanumeric:{
+          isAlphanumeric:true,
+          msg:"Password can only contain Alphanumeric"
+        },    
+      }
+    },
+    email: {
+      type:DataTypes.STRING,
+      allowNull:false,
+      validate:{
+        notNull:{
+          msg : "Email must be filled"
+        },
+        notEmpty:{
+          msg : "Email must be filled"
+        },    
+      }
+    },
+    role:{
+      type:DataTypes.STRING,
+      defaultValue: "Customer"
+    },
   }, {
     sequelize,
     modelName: 'Customer',
