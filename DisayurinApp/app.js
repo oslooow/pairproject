@@ -28,7 +28,7 @@ app.use(session({
 }));
 
 function auth(req, res, next) {
-  console.log(req.session);
+  // console.log(req.session);
   if (req.session && req.session.isAuthenticated) {
     next();
   } else {
@@ -51,11 +51,11 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/login', (req, res) => {
-  const { email, password } = req.body;
+  const { username, password } = req.body;
 
-  Customer.findOne({where:{ email }})
+  Customer.findOne({where:{ username }})
     .then(user => {
-      console.log(user.password);
+      console.log(user);
       if (!user || user.password !== password) {
         
         return res.render('login', { error: 'Invalid email or password. Please try again.' });
