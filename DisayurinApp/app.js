@@ -10,12 +10,14 @@ const register = require("./routes/register");
 const farmers = require("./routes/farmers");
 const products = require("./routes/products");
 const home = require("./routes/home");
-const logout = require('./routes/logout');
 
 app.set("view engine" , "ejs");
 app.use(express.urlencoded({extended:true}));
 
 app.use(register)
+app.use(home)
+
+
 
 const secretKey = uuid.v4();
 
@@ -26,6 +28,7 @@ app.use(session({
 }));
 
 function auth(req, res, next) {
+  console.log(req.session);
   if (req.session && req.session.isAuthenticated) {
     next();
   } else {
@@ -41,10 +44,6 @@ function auth(req, res, next) {
 app.use(auth, customers);
 app.use(auth, farmers);
 app.use(auth, products);
-
-
-app.use(home);
-
 
 
 app.get('/login', (req, res) => {
@@ -65,7 +64,7 @@ app.post('/login', (req, res) => {
       req.session.isAuthenticated = true;
       req.session.user = user;
 
-      res.redirect('/products');
+      res.redirect('/');
     })
     .catch(err => {
       console.error(err);

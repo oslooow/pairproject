@@ -10,7 +10,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       quantity: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        defaultValue : 0
+      },
+      total: {
+        type: Sequelize.INTEGER,
+        defaultValue : 0
       },
       createdAt: {
         allowNull: false,
