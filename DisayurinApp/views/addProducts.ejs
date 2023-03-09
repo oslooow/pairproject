@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Products</title>
+</head>
+<body >
+    <h1>Request Add Products</h1>
+    <form action="/products/addProduct" method="post">
+        <p>
+            Name <br>
+            <input type="text" name="name" >
+        </p>
+
+        <p>
+            Category <br>
+           <select name="category" >
+            <option value="category">Sayur</option>
+            <option value="category">Protein</option>
+            <option value="category">Buah</option>
+           </select>
+        </p>
+
+        <p>
+            <a href="/products/addProduct">
+                <button type="submit">Save</button>
+            </a>
+        </p>
+    </form>
+</body>
+</html>

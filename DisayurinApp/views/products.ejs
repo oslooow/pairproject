@@ -7,7 +7,7 @@
     <title>Products</title>
 </head>
 <body>
-
+    <a href="/">HOME</a>
     <h1>List Products</h1>
 
 
@@ -18,6 +18,13 @@
     <br>
     <br>
 
+    
+        <a href="/products/addProduct">
+            <button type="submit">Request Add Products</button>
+        </a>
+   
+        <br>
+        <br>
     <table border="1px">
 
       
@@ -26,8 +33,8 @@
             <tr>
                 <th>Name</th>
                 <th>Price</th>
-                <th>Expired Date</th>
                 <th>Details</th>
+                <th>Status</th>
             </tr>
         </thead>
         <tbody>
@@ -35,11 +42,32 @@
              
                 <tr>
                     <td><%= el.name %></td>
-                    <td><%= el.price %></td>
-                    <td>09-12-2012</td>
                     <td>
-                        <a href="/products/<%= el.id %>/detail"><%= el.name %> Details</a>
+                        <% if ( el.price  === null) { %>
+                            Calculating 
+                        <% } %>
+                        <% if (el.price) { %>
+                            <%= el.formatedPrice %>
+                        <% } %>
+
                     </td>
+                    <td>
+                        <% if ( el.price  === null) { %>
+                            Your <%= el.name %> details coming soon
+                        <% } %>
+                        <% if (el.price) { %>
+                            <a href="/products/<%= el.id %>/detail"><%= el.name %> Details</a>
+                        <% } %>
+                    </td>
+                    <td>
+                        <% if ( el.price  === null) { %>
+                         Coming soon
+                        <% } %>
+                        <% if (el.price) { %>
+                         Available
+                        <% } %>
+                    </td>
+                    
                 </tr>
             <% }) %>
         </tbody>

@@ -40,7 +40,6 @@ function auth(req, res, next) {
   }
 }
 
-
 app.use(auth, customers);
 app.use(auth, farmers);
 app.use(auth, products);

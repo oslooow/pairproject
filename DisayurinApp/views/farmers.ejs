@@ -7,20 +7,17 @@
     <title>Farmers</title>
 </head>
 <body>
-
+    <a href="/">HOME</a>
     <h1>List Farmers</h1>
 
     <table border="1px">
-
-        <a href="/farmers/addFarmer">
-            <button type="submit">Add Farmer</button>
-        </a>
 
         <thead>
             <tr>
                 <th>Name</th>
                 <th>Rating</th>
-                <th>ACTION</th>
+                <th>Pick the goods</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -29,11 +26,7 @@
                 <tr>
                     <td><%= el.name %></td>
                     <td><%= el.rating %></td>
-                    <td>
-                        <a href="/farmers/<%= el.id %>/addProduct">
-                            <button type="submit">Add Products</button>
-                        </a>
-                    </td>
+                    
                 </tr>
             <% }) %>
         </tbody>

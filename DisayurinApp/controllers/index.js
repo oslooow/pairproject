@@ -45,20 +45,24 @@ class Controller {
         .catch(err => res.send(err))
     }
 
-    static addFarmer (req,res) {
-        res.send("hi")
+    static addProduct (req,res) { // show add form
+        Farmer.findAll()
+        .then(data =>{
+            res.render("addProducts",{data})
+        })
+        .catch(err => res.send(err))
     }
-    
-    static saveAddFarmer (req,res) {
-        res.send("hi")
+        
+    static saveAddProduct (req,res) {
+        const { name , category } = req.body
+        Product.create({ name , category })
+        .then(data =>{
+            // res.send(data)
+            res.redirect("/products")
+        })
+        .catch(err => res.send(err))
     }
 
-    static addProduct (req,res) {
-        res.send("hi")
-    }
-    static saveAddProduct (req,res) {
-        res.send("hi")
-    }
     static showAllCustomers (req,res) { // menampilkan semua customers
         Customer.findAll()
         .then(data =>{
@@ -70,9 +74,10 @@ class Controller {
         res.send("hi")
     }
     static register (req,res) {
-        res.send("hi")
+        res.render("register")
     }
     static saveRegister (req,res) {
+
         res.send("hi")
     }
     static login(req,res){
