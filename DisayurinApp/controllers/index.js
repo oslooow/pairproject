@@ -1,22 +1,34 @@
 const {Address , Customer , Farmer , Product , Transcation} = require("../models/index")
 
 class Controller {
-    static home (req,res) {
+    static home (req,res) { // landing page home
         res.render("home")
     }
 
-    static showAllFarmers (req,res) {
+    static showAllFarmers (req,res) { // menampilkan semua farmers
         Farmer.findAll()
         .then(data =>{
             res.render("farmers",{data})
         })
         .catch(err => res.send(err))
     }
-    static showAllProducts (req,res) {
-        res.send("hi")
+
+    static showAllProducts (req,res) { // menampilkan semua products
+        Product.findAll()
+        .then(data =>{
+            // res.send(data)
+            res.render("products",{data})
+        })
+        .catch(err => res.send(err))
     }
-    static showProductsDetail (req,res) {
-        res.send("hi")
+
+    static showProductsDetail (req,res) { // menampilkan detail products
+        const productId = req.params.productId
+        Product.findAll({where: {id:productId}})
+        .then(data =>{
+            res.render("productsDetail",{data})
+        })
+        .catch(err => res.send(err))
     }
 
     static addFarmer (req,res) {
@@ -27,15 +39,18 @@ class Controller {
         res.send("hi")
     }
 
-
     static addProduct (req,res) {
         res.send("hi")
     }
     static saveAddProduct (req,res) {
         res.send("hi")
     }
-    static showAllCustomers (req,res) {
-        res.send("hi")
+    static showAllCustomers (req,res) { // menampilkan semua customers
+        Customer.findAll()
+        .then(data =>{
+            res.render("customers",{data})
+        })
+        .catch(err => res.send(err))
     }
     static showCustomersDetail (req,res) {
         res.send("hi")
