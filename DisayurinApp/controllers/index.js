@@ -27,7 +27,6 @@ class Controller {
         res.send("hi")
     }
 
-
     static addProduct (req,res) {
         res.send("hi")
     }
@@ -46,8 +45,8 @@ class Controller {
     static saveRegister (req,res) {
         res.send("hi")
     }
-    static login (req,res) {
-        res.send("hi")
+    static login(req,res){
+        res.send('login');
     }
     static logout (req,res) {
         res.send("hi")
