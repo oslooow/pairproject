@@ -1,5 +1,5 @@
 const {Address , Customer , Farmer , Product , Transcation} = require("../models/index")
-
+const { Op } = require("sequelize")
 class Controller {
     static home (req,res) { // landing page home
         res.render("home")
@@ -14,7 +14,21 @@ class Controller {
     }
 
     static showAllProducts (req,res) { // menampilkan semua products
-        Product.findAll()
+        const {  search  } = req.query
+        const options = {
+            where:{
+
+            }
+        }
+
+        if(search){
+            options.where.name = {
+                [Op.iLike]: `%${search}%`
+            }
+        }
+        console.log(search)
+
+        Product.findAll(options)
         .then(data =>{
             // res.send(data)
             res.render("products",{data})
