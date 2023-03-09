@@ -1,0 +1,162 @@
+[
+  {
+    "FarmerId": 3,
+    "name": "Kol",
+    "price": 16581,
+    "category": "Sayur",
+    "img": "http://dummyimage.com/118x100.png/dddddd/000000",
+    "description": "Donec ut dolor."
+  },
+  {
+    "FarmerId": 4,
+    "name": "Telur Badak",
+    "price": 8122,
+    "category": "Protein",
+    "img": "http://dummyimage.com/169x100.png/ff4444/ffffff",
+    "description": "Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam."
+  },
+  {
+    "FarmerId": 1,
+    "name": "Daging Kuda",
+    "price": 6443,
+    "category": "Protein",
+    "img": "http://dummyimage.com/222x100.png/ff4444/ffffff",
+    "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst."
+  },
+  {
+    "FarmerId": 2,
+    "name": "Daging Ayam",
+    "price": 2488,
+    "category": "Protein",
+    "img": "http://dummyimage.com/199x100.png/dddddd/000000",
+    "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante."
+  },
+  {
+    "FarmerId": 5,
+    "name": "Bayam",
+    "price": 13518,
+    "category": "Sayur",
+    "img": "http://dummyimage.com/227x100.png/cc0000/ffffff",
+    "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."
+  },
+  {
+    "FarmerId": 3,
+    "name": "Jeruk",
+    "price": 10185,
+    "category": "Buah",
+    "img": "http://dummyimage.com/227x100.png/ff4444/ffffff",
+    "description": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede."
+  },
+  {
+    "FarmerId": 4,
+    "name": "Telur Itik",
+    "price": 17572,
+    "category": "Protein",
+    "img": "http://dummyimage.com/167x100.png/cc0000/ffffff",
+    "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi."
+  },
+  {
+    "FarmerId": 2,
+    "name": "Daging Sapi Ethiopia",
+    "price": 8937,
+    "category": "Protein",
+    "img": "http://dummyimage.com/113x100.png/5fa2dd/ffffff",
+    "description": "Ut tellus."
+  },
+  {
+    "FarmerId": 1,
+    "name": "Apel",
+    "price": 18756,
+    "category": "Buah",
+    "img": "http://dummyimage.com/235x100.png/ff4444/ffffff",
+    "description": "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc."
+  },
+  {
+    "FarmerId": 2,
+    "name": "Markisa",
+    "price": 1836,
+    "category": "Buah",
+    "img": "http://dummyimage.com/118x100.png/5fa2dd/ffffff",
+    "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius."
+  },
+  {
+    "FarmerId": 4,
+    "name": "Telur Biawak",
+    "price": 10994,
+    "category": "Protein",
+    "img": "http://dummyimage.com/103x100.png/ff4444/ffffff",
+    "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor."
+  },
+  {
+    "FarmerId": 4,
+    "name": "Khuldi",
+    "price": 14524,
+    "category": "Buah",
+    "img": "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
+    "description": "In hac habitasse platea dictumst."
+  },
+  {
+    "FarmerId": 5,
+    "name": "Haha",
+    "price": 3050,
+    "category": "Buah",
+    "img": "http://dummyimage.com/222x100.png/cc0000/ffffff",
+    "description": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat."
+  },
+  {
+    "FarmerId": 4,
+    "name": "Mangga",
+    "price": 11540,
+    "category": "Buah",
+    "img": "http://dummyimage.com/221x100.png/cc0000/ffffff",
+    "description": "Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis."
+  },
+  {
+    "FarmerId": 3,
+    "name": "Semangka",
+    "price": 18006,
+    "category": "Buah",
+    "img": "http://dummyimage.com/156x100.png/ff4444/ffffff",
+    "description": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus."
+  },
+  {
+    "FarmerId": 3,
+    "name": "Daging Tapir",
+    "price": 18905,
+    "category": "Protein",
+    "img": "http://dummyimage.com/220x100.png/ff4444/ffffff",
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante."
+  },
+  {
+    "FarmerId": 1,
+    "name": "Paklo",
+    "price": 9959,
+    "category": "Buah",
+    "img": "http://dummyimage.com/111x100.png/dddddd/000000",
+    "description": "Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna."
+  },
+  {
+    "FarmerId": 1,
+    "name": "Jambu Biji",
+    "price": 2655,
+    "category": "Buah",
+    "img": "http://dummyimage.com/197x100.png/cc0000/ffffff",
+    "description": "Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus."
+  },
+  {
+    "FarmerId": 1,
+    "name": "Bawang Merah",
+    "price": 12661,
+    "category": "Buah",
+    "img": "http://dummyimage.com/135x100.png/5fa2dd/ffffff",
+    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo."
+  },
+  {
+    "FarmerId": 4,
+    "name": "Bawang Putih",
+    "price": 5099,
+    "category": "Sayur",
+    "img": "http://dummyimage.com/142x100.png/cc0000/ffffff",
+    "description": "Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio."
+  }
+]
