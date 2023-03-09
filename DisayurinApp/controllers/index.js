@@ -1,8 +1,9 @@
-const { Address, Customer, Farmer, Product, Transcation } = require("../models/index")
+const { Address, Customer, Farmer, Product, Transaction } = require("../models/index")
 const { Op } = require("sequelize")
+const { privateDecrypt } = require("crypto")
 class Controller {
 
-    static landing(req, res) {
+    static landing(req, res) { // landing page
         res.render('landing')
     }
 
@@ -28,6 +29,8 @@ class Controller {
         let toSend = {id, name, role}
         const { search } = req.query
         const options = {
+            include: Customer,
+            order: [["createdAt" , "ASC"]],
             where: {
 
             }
@@ -38,12 +41,12 @@ class Controller {
                 [Op.iLike]: `%${search}%`
             }
         }
-        console.log(search)
+        
 
         Product.findAll(options)
             .then(data => {
                 // res.send(data)
-                res.render("products", { data , toSend })
+                res.render("products", { data , toSend})
             })
             .catch(err => res.send(err))
     }
@@ -70,7 +73,7 @@ class Controller {
         .catch(err => res.send(err))
     }
     static saveAddProduct (req,res) {
-        let { name , category, FarmerId } = req.body
+        const { name , category, FarmerId } = req.body
         Product.create({ name , category, FarmerId })
         .then(data =>{
             // res.send(data)
@@ -88,18 +91,71 @@ class Controller {
             })
             .catch(err => res.send(err))
     }
-    static showCustomersDetail(req, res) {
-        res.send("hi")
+
+    static deleteProductsById(req,res) { // delete by id
+        const productId = req.params.productId
+        Product.destroy({where : {id:productId}})
+        .then(data => {
+            res.redirect("/products")
+        })
+        .catch(err => res.send(err))
     }
-    static register(req, res) {
-        res.render('register')
+
+    static showUpdateForm(req, res) { // menampulkan update form
+        const productId = req.params.productId
+        Product.findByPk(productId)
+        .then(data => {
+            // res.send(data)
+            res.render("updateForm" , { data })
+        })
+        .catch(err => res.send(err))
+
     }
-    static saveRegister(req, res) {
-        console.log(req.body);
+
+    static saveUpdate(req, res) { // save update
+        const { name , category } = req.body
+        const productId = req.params.productId
+        Product.update({ name , category },{
+            where: {id:productId}
+        })
+        .then(() => {
+            res.redirect("/products")
+        })
+        .catch(err =>  res.send(err))
+    }
+
+    static showFarmersGoods(req,res) {
+        const farmerId = req.params.farmerId
+        Farmer.findAll({
+            include: Product,
+            where : { id :  farmerId}
+        })
+        .then(data =>{
+            // res.send(data)
+            res.render("listFarmersGoods" , { data })
+        })
+        .catch(err => res.send(err))
+    }
+
+    static register(req, res) { // show form regis
+        const errors = req.query.errors
+
+        res.render('register' , {errors})
+    }   
+
+    static saveRegister(req, res) { //save register
+        
         let { name, username, password, email } = req.body
         Customer.create({ name, username, password, email })
             .then(data => res.redirect('/login'))
-            .catch(err => res.send(err))
+            .catch(err => {
+                // res.send(err)
+                if(err.name === "SequelizeValidationError"){
+                    const errors = err.errors.map(e => e.message)
+                    
+                    res.redirect(`/register?errors=${errors}`)
+                } else res.send(err)
+            })
     }
     static buy(req,res){
         
