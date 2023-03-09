@@ -18,6 +18,9 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "ProductId"
       })
     }
+    get formattedPrice(){
+      return this.price = "Rp." + this.price
+    }
   }
   Product.init({
     FarmerId: DataTypes.INTEGER,
