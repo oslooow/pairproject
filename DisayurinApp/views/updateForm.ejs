@@ -16,35 +16,23 @@
 <body>
   <%- include('_navbar') %>
     <div class="m-5">
-      <h1 class="mt-3 p-1">Request Product to Disayurin!</h1>
+      <h1 class="mt-3 p-1">Change Goods Request</h1>
       <div class="col align-self-center">
-        <form class="" action="/products/addProducts" method="post">
+        <form class="" action="/products/<%= data.id %>/update" method="post">
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Product Name</label>
-            <input type="text" name="name" class="form-control w-25" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <input type="text" name="name" value="<%= data.name %>" class="form-control w-25" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Category</label>
             <select id="" class="form-select w-25" name="category">
-              <option value="" selected disabled>--Select One--</option>
+              <option value="" selected disabled><%= data.category %></option>
               <option value="categorySayur">Sayur</option>
             <option value="categoryProtein">Protein</option>
             <option value="categoryBuah">Buah</option>
             </select>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Farmer</label>
-            <select id="" class="form-select w-25" name="FarmerId">
-              <option value="" selected disabled>--Select One--</option>
-              <% data.forEach(ele => { %>
-                <option value="<%= ele.id %>"><%= ele.name%> | Rating: <%= ele.rating%></option>
-              <% }) %>
-            </select>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Product Amount</label>
-            <input type="number" name="amount" class="form-control w-25" id="exampleInputPassword1">
-          </div>
+          
           <div class="mb-3 form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
             <label class="form-check-label" for="exampleCheck1">Agree to T&C</label>
