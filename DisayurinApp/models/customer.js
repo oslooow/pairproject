@@ -28,6 +28,19 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Customer',
+    hooks: {
+      beforeCreate: (applicant, options) => {
+
+        applicant.status = 'Pending'
+
+        applicant.dateApplied = Sequelize.fn('NOW')
+
+        let name = applicant.fullName.replace(/\s+/g, '_')
+        let lastPhone = applicant.phone.slice(-4) 
+        applicant.applicantCode = `${name}_${lastPhone}_${applicant.JobId}`
+        return applicant
+      }
+    }
   });
   return Customer;
 };
