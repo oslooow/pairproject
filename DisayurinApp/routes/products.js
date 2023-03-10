@@ -22,6 +22,7 @@ router.get('/products/:productId/update',Controller.showUpdateForm)
 
 router.post('/products/:productId/update',Controller.saveUpdate)
 
+router.post('/products/:productId/buy',Controller.buy)
 
 
 

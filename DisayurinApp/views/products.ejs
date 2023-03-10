@@ -42,6 +42,7 @@
                     <tr>
                         <th scope="col">Image</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Stock</th>
                         <th scope="col">Price</th>
                         <th scope="col">Status</th>
                         <th scope="col"></th>
@@ -54,7 +55,10 @@
                                 <img src="<%= el.img %>" class="img_thumbnail" alt="">
                             </td>
                             <td>
-                                <%= el.name %>
+                                <%= el.category %> <%= el.name %>
+                            </td>
+                            <td>
+                                <%= el.stock %>
                             </td>
                             <td>
                                 <% if ( el.price  === null) { %>
@@ -88,7 +92,7 @@
                                     </a>
                                 </td>
                                 <td>
-                                    <form method="POST" action="/products/buy">
+                                    <form method="POST" action="/products/<%= el.id %>/buy">
                                         <input type="hidden" name="ProductId" value="<%= el.id %>">
                                         <input type="hidden" name="CustomerId" value="<%= toSend.id %>">
                                         <label for="quantity">Qty:</label>
