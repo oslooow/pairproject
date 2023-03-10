@@ -5,7 +5,8 @@
     "price": 16581,
     "category": "Sayur",
     "img": "http://dummyimage.com/118x100.png/dddddd/000000",
-    "description": "Donec ut dolor."
+    "description": "Donec ut dolor.",
+    "stock": 77
   },
   {
     "FarmerId": 4,
@@ -13,7 +14,8 @@
     "price": 8122,
     "category": "Protein",
     "img": "http://dummyimage.com/169x100.png/ff4444/ffffff",
-    "description": "Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam."
+    "description": "Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+    "stock": 24
   },
   {
     "FarmerId": 1,
@@ -21,7 +23,8 @@
     "price": 6443,
     "category": "Protein",
     "img": "http://dummyimage.com/222x100.png/ff4444/ffffff",
-    "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst."
+    "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst.",
+    "stock": 77
   },
   {
     "FarmerId": 2,
@@ -29,7 +32,8 @@
     "price": 2488,
     "category": "Protein",
     "img": "http://dummyimage.com/199x100.png/dddddd/000000",
-    "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante."
+    "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante.",
+    "stock": 87
   },
   {
     "FarmerId": 5,
@@ -37,7 +41,8 @@
     "price": 13518,
     "category": "Sayur",
     "img": "http://dummyimage.com/227x100.png/cc0000/ffffff",
-    "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis."
+    "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
+    "stock": 69
   },
   {
     "FarmerId": 3,
@@ -45,7 +50,8 @@
     "price": 10185,
     "category": "Buah",
     "img": "http://dummyimage.com/227x100.png/ff4444/ffffff",
-    "description": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede."
+    "description": "Nulla suscipit ligula in lacus. Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam. Nam tristique tortor eu pede.",
+    "stock": 85
   },
   {
     "FarmerId": 4,
@@ -53,7 +59,8 @@
     "price": 17572,
     "category": "Protein",
     "img": "http://dummyimage.com/167x100.png/cc0000/ffffff",
-    "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi."
+    "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
+    "stock": 23
   },
   {
     "FarmerId": 2,
@@ -61,7 +68,8 @@
     "price": 8937,
     "category": "Protein",
     "img": "http://dummyimage.com/113x100.png/5fa2dd/ffffff",
-    "description": "Ut tellus."
+    "description": "Ut tellus.",
+    "stock": 99
   },
   {
     "FarmerId": 1,
@@ -69,7 +77,8 @@
     "price": 18756,
     "category": "Buah",
     "img": "http://dummyimage.com/235x100.png/ff4444/ffffff",
-    "description": "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc."
+    "description": "Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl. Aenean lectus. Pellentesque eget nunc.",
+    "stock": 123
   },
   {
     "FarmerId": 2,
@@ -77,7 +86,8 @@
     "price": 1836,
     "category": "Buah",
     "img": "http://dummyimage.com/118x100.png/5fa2dd/ffffff",
-    "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius."
+    "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus. Nulla ut erat id mauris vulputate elementum. Nullam varius.",
+    "stock": 35
   },
   {
     "FarmerId": 4,
@@ -85,7 +95,8 @@
     "price": 10994,
     "category": "Protein",
     "img": "http://dummyimage.com/103x100.png/ff4444/ffffff",
-    "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor."
+    "description": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis. Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor.",
+    "stock": 98
   },
   {
     "FarmerId": 4,
@@ -93,7 +104,8 @@
     "price": 14524,
     "category": "Buah",
     "img": "http://dummyimage.com/188x100.png/5fa2dd/ffffff",
-    "description": "In hac habitasse platea dictumst."
+    "description": "In hac habitasse platea dictumst.",
+    "stock": 87
   },
   {
     "FarmerId": 5,
@@ -101,7 +113,8 @@
     "price": 3050,
     "category": "Buah",
     "img": "http://dummyimage.com/222x100.png/cc0000/ffffff",
-    "description": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat."
+    "description": "Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est. Phasellus sit amet erat.",
+    "stock": 77
   },
   {
     "FarmerId": 4,
@@ -109,7 +122,8 @@
     "price": 11540,
     "category": "Buah",
     "img": "http://dummyimage.com/221x100.png/cc0000/ffffff",
-    "description": "Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis."
+    "description": "Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+    "stock": 211
   },
   {
     "FarmerId": 3,
@@ -117,7 +131,8 @@
     "price": 18006,
     "category": "Buah",
     "img": "http://dummyimage.com/156x100.png/ff4444/ffffff",
-    "description": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus."
+    "description": "Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis. Fusce posuere felis sed lacus.",
+    "stock": 99
   },
   {
     "FarmerId": 3,
@@ -125,7 +140,8 @@
     "price": 18905,
     "category": "Protein",
     "img": "http://dummyimage.com/220x100.png/ff4444/ffffff",
-    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante."
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus. Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.",
+    "stock": 56
   },
   {
     "FarmerId": 1,
@@ -133,7 +149,8 @@
     "price": 9959,
     "category": "Buah",
     "img": "http://dummyimage.com/111x100.png/dddddd/000000",
-    "description": "Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna."
+    "description": "Etiam justo. Etiam pretium iaculis justo. In hac habitasse platea dictumst. Etiam faucibus cursus urna.",
+    "stock": 42
   },
   {
     "FarmerId": 1,
@@ -141,7 +158,8 @@
     "price": 2655,
     "category": "Buah",
     "img": "http://dummyimage.com/197x100.png/cc0000/ffffff",
-    "description": "Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus."
+    "description": "Nulla nisl. Nunc nisl. Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus.",
+    "stock": 73
   },
   {
     "FarmerId": 1,
@@ -149,7 +167,8 @@
     "price": 12661,
     "category": "Buah",
     "img": "http://dummyimage.com/135x100.png/5fa2dd/ffffff",
-    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo."
+    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum. Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo.",
+    "stock": 66
   },
   {
     "FarmerId": 4,
@@ -157,6 +176,7 @@
     "price": 5099,
     "category": "Sayur",
     "img": "http://dummyimage.com/142x100.png/cc0000/ffffff",
-    "description": "Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio."
+    "description": "Aenean auctor gravida sem. Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+    "stock": 666
   }
 ]

@@ -11,8 +11,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Transaction.belongsTo(models.Customer)
-      Transaction.belongsTo(models.Product)
+      Transaction.belongsTo(models.Customer);
+      Transaction.belongsTo(models.Product);
+    }
+
+    static get totalPrice() {
+      return this.getDataValue('quantity') * this.Product.getDataValue('price');
     }
   }
   Transaction.init({
@@ -22,7 +26,8 @@ module.exports = (sequelize, DataTypes) => {
     total: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Transaction',
+    modelName: 'Transaction'
+
   });
   return Transaction;
 };
