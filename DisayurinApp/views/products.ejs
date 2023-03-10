@@ -77,20 +77,28 @@
                                 <% } %>
                             </td>
                             <td>
-                                <% if (el.price  === null) { %>
-                                    <a href="/products/<%= el.id %>/update"> <button class="btn btn-success">Change Goods
+                                <% if (toSend.role === "Admin") { %>
+                                    <a href="/products/<%= el.id %>/update"> <button class="btn btn-success">Edit Product
                                     </button>
-                                    </a>
-                                    <a href="/products/<%= el.id %>/delete"> <button class="btn btn-danger">I don't have money
-                                    </button>
-                                    </a>
-                                <% } %>
-                                <% if (el.price) { %>
-                                    <td>                              
-                                    <a href="/products/<%= el.id %>/detail"> <button class="btn btn-success">Details
+                                    <a href="/products/<%= el.id %>/delete"><button type="button" class="btn btn-danger">Delete Product</button></a>
+                                <% } else { %>
+                                    <% if (el.price  === null) { %>
+                                    
+                                        <a href="/products/<%= el.id %>/update"> <button class="btn btn-success">Change Goods
                                         </button>
-                                    </a>
-                                </td>
+                                        </a>
+                                        <a href="/products/<%= el.id %>/delete"> <button class="btn btn-danger">I don't have money
+                                        </button>
+                                        </a>
+                                    <% } %>
+                                    <% if (el.price) { %>
+                                        <td>                              
+                                        <a href="/products/<%= el.id %>/detail"> <button class="btn btn-success">Details
+                                            </button>
+                                        </a>
+                                    </td>
+                                <%} %>
+                                
                                 <td>
                                     <form method="POST" action="/products/<%= el.id %>/buy">
                                         <input type="hidden" name="ProductId" value="<%= el.id %>">

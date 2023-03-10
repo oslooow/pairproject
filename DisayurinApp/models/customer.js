@@ -32,10 +32,10 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty:{
           msg : "Name must be filled"
         },
-        isAlpha: {
-          isAlpha:true,
-          msg:"Name can only use alphabet"
-        },        
+        max: {
+          max:19,
+          msg : 'Maximal Characters For Fullname is 19'
+        }       
       }
     },
     username: {
@@ -48,10 +48,10 @@ module.exports = (sequelize, DataTypes) => {
         notEmpty:{
           msg : "Username must be filled"
         },
-        isAlpha: {
-          isAlpha:true,
-          msg:"Username can only use alphabet"
-        },    
+        max: {
+          max:8,
+          msg : 'Maximum Characters For username is 8'
+        }      
       }
     },
     password: {
