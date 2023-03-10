@@ -103,11 +103,13 @@ class Controller {
     }
 
     static showUpdateForm(req, res) { // menampulkan update form
+        let { id, name, role } = req.session.user
+        let toSend = { id, name, role }
         const productId = req.params.productId
         Product.findByPk(productId)
             .then(data => {
                 // res.send(data)
-                res.render("updateForm", { data })
+                res.render("updateForm", { data ,toSend})
             })
             .catch(err => res.send(err))
 
@@ -126,14 +128,16 @@ class Controller {
     }
 
     static showFarmersGoods(req, res) {
+        let { name, role } = req.session.user
+        let toSend = { name, role }
         const farmerId = req.params.farmerId
         Farmer.findAll({
             include: Product,
-            where: { id: farmerId }
+            where: { id: { [Op.eq]: farmerId }}
         })
             .then(data => {
                 // res.send(data)
-                res.render("listFarmersGoods", { data })
+                res.render("listFarmersGoods", { data,toSend })
             })
             .catch(err => res.send(err))
     }
@@ -144,10 +148,16 @@ class Controller {
         res.render('register', { errors })
     }
 
+    static registerAdmin(req, res) { // show form regis
+        const errors = req.query.errors
+
+        res.render('registerAdmin', { errors })
+    }
+
     static saveRegister(req, res) { //save register
 
-        let { name, username, password, email } = req.body
-        Customer.create({ name, username, password, email })
+        let { name, username, password, email, role} = req.body
+        Customer.create({ name, username, password, email ,role})
             .then(data => res.redirect('/login'))
             .catch(err => {
                 // res.send(err)
